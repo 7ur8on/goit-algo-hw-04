@@ -1,5 +1,3 @@
-import pathlib
-
 def total_salary(path):
     try:
         with open(path, "r", encoding="utf-8") as file: # менеджер контексту для читання файлів
@@ -14,9 +12,8 @@ def total_salary(path):
     except FileNotFoundError:
         return "Файл не знайдено.", None # повертаєм повідомлення як що файл не найдений
 
-if __name__ == "__main__": # чи є поточний файл головним
-    total, average = total_salary("salary_of_employees/salary_file.txt") # викликаєм фунцію із шляхом до файлу
-    if isinstance(total, str): # перевіряємо чи загальна сума є рядком
-        print(total)
-    else:
-        print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}") # виводим повідомлення
+total, average = total_salary("salary_of_employees/salary_file.txt") # викликаєм фунцію із шляхом до файлу
+if isinstance(total, str): # перевіряємо чи загальна сума є рядком
+    print(total)
+else:
+    print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}") # виводим повідомлення
