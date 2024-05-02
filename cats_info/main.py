@@ -11,7 +11,5 @@ def get_cats_info(path):
     except Exception as e:
         print("Сталася помилка:", e)
     return cats_info
-
-# Приклад використання:
 cats_info = get_cats_info("cats_info/cats_file.txt")
 print(cats_info)
